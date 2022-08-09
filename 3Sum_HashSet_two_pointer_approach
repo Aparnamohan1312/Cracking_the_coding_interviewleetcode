@@ -1,0 +1,22 @@
+//3 sum Java HashSet and two pointer approach
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        HashSet<List<Integer>> set = new HashSet<>();
+        if(nums.length<3)
+            return new ArrayList(set);
+        else{
+            Arrays.sort(nums);
+        for(int i=0;i<nums.length-2;i++){
+            int p =i+1, r=nums.length-1;
+            while(p<r){
+            int s = nums[p]+nums[r]+nums[i];
+            if(s==0)
+                set.add(Arrays.asList(nums[i],nums[p],nums[r]));
+            if(s<0)
+                p++;
+            else
+                r--;
+        }}}
+        return new ArrayList(set);
+             }
+}
