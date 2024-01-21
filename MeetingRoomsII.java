@@ -8,8 +8,13 @@ class MeetingRoomsII{
         int endTime = list.get(0).get(1);
         for(int i=1;i<list.size();i++){
                 int startTime = list.get(i).get(0);
-                if(startTime<=endTime)
+                 if(startTime<endTime){
+                    endTime = Math.max(endTime,list.get(i).get(1));
+                }
+                else{
                     result++;
+                    endTime = list.get(i).get(1);
+                }
         }
         return result;
     }
