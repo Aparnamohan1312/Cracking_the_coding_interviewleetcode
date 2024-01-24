@@ -1,6 +1,6 @@
 import java.util.*;
 class LongestSubstring_kchar{
-    List<String> stringlist;
+  //  List<String> stringlist;
     public int func(String s, int k){
         if(s.equals(""))
             return 0;
